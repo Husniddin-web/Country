@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    --bg-primary: rgb(227, 221, 221);
+    --main-color: #000 ;
+    --card-color :#181D31;
+    --strong-color: #4FA095;
+    --heading-color:#000;
+    --mode-color:black;
+    --nav-bg-color:#434242;
+  }
+.dark{
+    --bg-primary: rgba(0, 0, 0, 0.679);
+    --main-color:   rgb(27, 24, 24) ;
+    --card-color: rgb(49, 47, 47);
+    --strong-color: #4FA095;
+    --heading-color:#ffff
+    --mode-color:#fff;
+    --nav-bg-color:#F3EFE0;
+}
+
+
+ p,h1,h3{
+  color: var(--heading-color);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.container{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1400px;
+}
+body{
+    background-color: var(--bg-primary);
+    color: var(--main-color);
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0;
+}
+.info-str{
+  font-size: 20px;
+  color: var(--strong-color);
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  20px 0;
+}
+.nav__logo{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.icon-mode{
+    font-size: 30px;
+}
+.card{
+    width: 400px;
+    /* height: 300px; */
+}
+.country{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.card-img img{
+    width: 100%;
+    height: 250px;
+}
+.card-item{
+    font-weight: bold;
+}
+.info-item{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
+  text-align: start;
+}
+.country-img{
+  width: 60%;
+  height: 70%;
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+
+
+/* LOADER */
+.lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 300px auto;
+    display: flex;
+    /* position: absolute; */
+    /* width: 100vw; */
+    /* height: 100vh; */
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .pages{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  @media only screen and (max-width:810px){
+    .info{
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+    }
+  }
