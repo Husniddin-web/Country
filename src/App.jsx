@@ -6,7 +6,7 @@ import { ModeContext } from "./context/Mode";
 function App() {
   const { mode, setMode } = useContext(ModeContext);
   useEffect(() => {
-    document.body.className = mode ? "dark" : "";
+    document.body.className = mode ? "" : "dark";
   }, [mode]);
   return (
     <>
